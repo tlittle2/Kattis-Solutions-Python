@@ -1,20 +1,16 @@
 def main():
     l = list()
 
-    l.append(int(input()))
-    l.append(int(input()))
-    l.append(int(input()))
-
-
-    idx = l.index(min(l))
-
-    if idx == 0:
-        print("Monnei")
-    elif idx == 1:
-        print("Fjee")
-    elif idx ==2:
-        print("Dolladollabilljoll")
-        
+    for _ in range(3):
+        l.append(int(input()))
+    
+    match l.index((min(l))):
+        case 0:
+            print("Monnei")
+        case 1:
+            print("Fjee")
+        case 2:
+            print("Dolladollabilljoll")
 
 if __name__ == "__main__":
     main()

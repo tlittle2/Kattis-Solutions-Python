@@ -1,22 +1,16 @@
-#/usr/bin/env python3
-
-import sys
-
-
 def factorial(x):
-    
     if x== 1:
         return 1
     else:
-        output = x * factorial(x-1)
-        return output
+        return (x * factorial(x-1))
 
         
+def main():
+    testCase= int(input())
 
-testCase= int(sys.stdin.readline())
-answer= 0
+    for _ in range(testCase):
+        testInput= int(input())
+        print(factorial(testInput) % 10)
 
-for i in range(testCase):
-    testInput= int(sys.stdin.readline())
-    answer= factorial(testInput) % 10
-    print(answer) 
+if __name__ == "__main__":
+    main()

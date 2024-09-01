@@ -7,7 +7,7 @@ def determineWinner(list, char):
 def main():
     l = [list(filter(lambda x: x != ' ', inner_list)) for inner_list in [list(input()) for _ in range(3)]] #make 2d list of data from stdin, removing ' ' from the inner list to make input easier to work with
 
-    horizontal = l
+    horizontal = l #the data from the originally 2d list is all the horizontals
     vertical = list(zip(*l)) #group all index 0s, index 1s, and index 2s together to form all verticals
     leftDiagonal = [(l[0][0],l[1][1],l[2][2])]
     rightDiagonal = [(l[0][2],l[1][1],l[2][0])]

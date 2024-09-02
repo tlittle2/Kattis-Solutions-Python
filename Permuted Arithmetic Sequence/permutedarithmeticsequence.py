@@ -1,9 +1,7 @@
 def findDiffs(lst):
     differences = set()
-
     for i in range(len(lst) - 1):
-        diff = lst[i + 1] - lst[i]
-        differences.add(diff)
+        differences.add(lst[i + 1] - lst[i]) #add difference of adjacent indices to set
 
     if len(differences) == 1:
         return True
@@ -15,6 +13,7 @@ def main():
         lst.remove(lst[0])
 
         #These types of lists can only exist if the list sorted in some way (pre-sorted of sorted manually)
+    
         if findDiffs(lst): # if the original list satisfies criteria (already sorted)
             print("arithmetic")
         elif findDiffs(sorted(lst)) or findDiffs(sorted(lst, reverse= True)): #if a manually sorted list satisfies criteria

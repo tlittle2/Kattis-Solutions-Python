@@ -6,7 +6,6 @@ def main():
         for i in n:
             s+= i * 60**d
             d-=1
-        print(s)
-        
+        print(s)        
 if __name__ == "__main__":
     main()

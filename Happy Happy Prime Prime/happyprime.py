@@ -1,7 +1,3 @@
-"""
-Only works on test input
-"""
-
 def isPrime(n):
     if n == 0 or n == 1:
         return False
@@ -12,21 +8,23 @@ def isPrime(n):
     return True
 
 def isHappy(n):
-    if int(n) == 1:
+    if int(n) == 1: #as per the problem, 1 should not be considered a prime
         return False
-    
+        
     ans = 0
-
     for i in list(str(n)):
         ans+= int(i) ** 2
-    
-    if(len(str(ans)) == 1):
-        if int(ans) == 1:
+        
+    if(len(str(ans)) == 1): #continue recursing until the length of the string is 1
+        if int(ans)==7: #The only single digit number that ALWAYS works is 7
+            return True
+        elif int(ans) == 1: #if the answer is 1, then it's happy
             return True
         else:
             return False
     else:
        return isHappy(ans)
+
 
 def main():
     for _ in range(int(input())):

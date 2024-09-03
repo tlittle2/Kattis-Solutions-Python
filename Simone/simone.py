@@ -3,7 +3,7 @@ def main():
     ip = input().split()
     possible = ip[1]
 
-    for i in range(1,int(possible)+1): #start all value in the map at 0, and increment later
+    for i in range(1,int(possible)+1): #initialize all keys to have a value of 0, and increment later
         d[str(i)] = 0
 
     colors = input().split()

@@ -1,5 +1,3 @@
-#/usr/bin/env python3
-
 def main():
     statues= int(input())
 
@@ -15,7 +13,7 @@ def main():
             days+=1
             numberOfStatuesPrinted+= numberOfPrinters
 
-
     print(days)
+    
 if __name__ == "__main__":
     main()

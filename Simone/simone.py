@@ -1,15 +1,12 @@
 def main():
     d = {}
-    ip = input().split()
-    possible = ip[1]
+    possibleColors = input().split()[1]
 
-    for i in range(1,int(possible)+1): #initialize all keys to have a value of 0, and increment later
+    for i in range(1,int(possibleColors)+1): #initialize all keys to have a value of 0, and increment later
         d[str(i)] = 0
 
-    colors = input().split()
-
-    for i in colors: #for each color from the input that has a corresponding key, increment the value
-        d[i] +=1 
+    for i in input().split(): #for each color from the input that has a corresponding key, increment the value
+        d[i] +=1
 
     vals = []
     
@@ -21,7 +18,6 @@ def main():
         print(len(vals))
         for i in vals:
             print("{}".format(i), sep = "", end = " ")
-        
-
+            
 if __name__ == "__main__":
     main()

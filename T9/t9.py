@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-
-
-import sys
-
-
 dict = {
     'a': '2',
     'b': '22',
@@ -32,8 +26,6 @@ dict = {
     'y': '999',
     'z': '9999',
     " ": '0'
-
-
     }
 
 def main():

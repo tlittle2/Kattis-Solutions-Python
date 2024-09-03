@@ -1,12 +1,8 @@
-#/usr/bin/env python3
-
 def main():
-    x= int(input())
-
     score=0
-
     increment= 1
-
+    
+    x= int(input())
     while increment * increment <= x:
         if x % increment ==0:
             x= x/increment
@@ -17,6 +13,6 @@ def main():
         increment+= 1
             
     print(score)
-
+    
 if __name__ == "__main__":
     main()

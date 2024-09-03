@@ -20,7 +20,7 @@ def main():
     if len(vals) > 0: #if we have stuff to print out, print it
         print(len(vals))
         for i in vals:
-            print("{} ".format(i), sep = "", end = "")
+            print("{}".format(i), sep = "", end = " ")
         
 
 if __name__ == "__main__":

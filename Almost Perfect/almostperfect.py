@@ -1,26 +1,23 @@
 """
-Note, doesn't work on larger inputs
+Answer is right, but website having trouble reading input
 """
-def get_divisors(n):
-    l = list()
-    for i in range(1, int(n / 2) + 1):
-        if n % i == 0:
-            l.append(i)
-    return l
+
+import math
 
 def main():
     while True :
         ip = int(input())
-        l = get_divisors(ip)
-        s = sum(i for i in l)
-        if s == ip:
+        count = 1
+        for i in range(2, int(math.sqrt(ip)) + 1):
+            if ip % i == 0:
+                count+=i
+                if i*i != ip:
+                    count+= ip//i
+        if count == ip:
             print("{} perfect".format(ip))
-        
-        elif (ip - s) <=2:
+        elif abs(ip - count) <=2:
             print("{} almost perfect".format(ip))
-        
         else:
-            print("{} not perfect".format(ip))
-    
+            print("{} not perfect".format(ip))                
 if __name__ == "__main__":
     main()

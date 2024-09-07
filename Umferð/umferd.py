@@ -1,9 +1,7 @@
 def main():
     _ = int(input())
-    lines = int(input())
     lst = []
-
-    for _ in range(lines):
+    for _ in range(int(input())):
         for k in list(input()):
             lst.append(k)
 

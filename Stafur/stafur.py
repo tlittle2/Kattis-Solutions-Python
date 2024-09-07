@@ -1,16 +1,6 @@
 def main():
-    vowels = ('A','E' 'I','O','U')
-
-    ip = (input())
-
-    if ip in vowels:
-        print("Jebb")
-    else:
-        if ip == 'Y':
-            print("Kannski")
-        else:
-            print("Neibb")
-
+    lst = {'A', 'E', 'I', 'O', 'U'}
+    ip = input()
+    print( "Jebb" if lst.intersection(ip) else "Kannski" if ip == 'Y' else "Neibb")
 if __name__ == "__main__":
     main()
-Stafur

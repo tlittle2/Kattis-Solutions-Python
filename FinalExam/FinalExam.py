@@ -1,24 +1,16 @@
-#/usr/bin/env python3
-import sys
-
 def main():
-    n= int(sys.stdin.readline())
+    n= int(input())
 
     correct= []
-
-    myAnswers= []
-    same= True
-
-    count=0
     for i in range(n):
-        answer= sys.stdin.readline()
+        answer= input()
         correct.append(answer)
-
-
+    
+    myAnswers= []
     for i in range(1, len(correct)):
         myAnswers.append(correct[i])
 
-
+    count=0
     for i in range(len(correct) -1):
         if correct[i] == myAnswers[i]:
             count+=1

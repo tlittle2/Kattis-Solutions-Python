@@ -4,7 +4,7 @@ def main():
 
     for i in range(len(sentence)):
         for j in list(sentence[i]):
-            if j in badCharacters:
+            if j in badCharacters: # if current character is bad character, update all characters in original word list to all *'s
                 sentence[i] = "*" * len(sentence[i])
                 break
     

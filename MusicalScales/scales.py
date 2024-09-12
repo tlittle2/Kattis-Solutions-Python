@@ -1,65 +1,34 @@
-#!/usr/bin/env python3
-
-
-#A , A♯, B, C, C♯, D, D♯, E, F, F♯, G, G♯
-
-
 def main():
-    scales = [
-          ['A', 'B', 'C#', 'D', 'E', 'F#', 'G#',]
-        , ['B', 'C#', 'D#', 'E', 'F#', 'G#', 'A#']
-        , ['C', 'D', 'E', 'F', 'G', 'A', 'B']
-        , ['D', 'E', 'F#', 'G', 'A', 'B', 'C#']
-        , ['E', 'F#', 'G#', 'A', 'B', 'C#', 'D#']
-        , ['F', 'G', 'A', 'A#', 'C', 'D', 'E']
-        , ['G', 'A', 'B', 'C', 'D', 'E', 'F#']
-
-        , ['A♯' , 'C', 'D', 'D♯', 'F', 'G', 'A']
-        , ['C#', 'D#', 'E#', 'F#', 'G#', 'A#', 'B#']
-        , ['D#', 'F', 'G', 'G#', 'A#', 'C', 'D']
-        , ['F#', 'G#', 'A#', 'B', 'C#', 'D#', 'E#']
-        , ['G#', 'A#', 'C', 'C#', 'D#', 'F', 'G']
-          ]
-
-
-    n = int(input())
-
-    s = set()
-
-    notes = [i for i in input().split()]
-
-    for note in notes:
-        s.add(note)
-
-    #print("Set {}".format(s))
-
-    b = False
-    srtLst= []
-    for scale in scales:
-        if s.issubset(scale):
-            srtLst.append(scale[0])
-            b = True
-
-
-    if not b:
-        print('none')
-
-    else:
-        srtLst.sort()
-        for i in srtLst:
-            print(i, sep = "", end =" ")
-
-        
-
-
-
+    scales = {
+        'A': ['A', 'B', 'C#', 'D', 'E', 'F#', 'G#'],
+        'B': ['B', 'C#', 'D#', 'E', 'F#', 'G#', 'A#'],
+        'C': ['C', 'D', 'E', 'F', 'G', 'A', 'B'],
+        'D': ['D', 'E', 'F#', 'G', 'A', 'B', 'C#'],
+        'E': ['E', 'F#', 'G#', 'A', 'B', 'C#', 'D#'],
+        'F': ['F', 'G', 'A', 'A#', 'C', 'D', 'E'],
+        'G': ['G', 'A', 'B', 'C', 'D', 'E', 'F#'],
+        'A#': ['A#' , 'C', 'D', 'D#', 'F', 'G', 'A'],
+        'C#': ['C#', 'D#', 'F', 'F#', 'G#', 'A#', 'C'],
+        'D#': ['D#', 'F', 'G', 'G#', 'A#', 'C', 'D'],
+        'F#': ['F#', 'G#', 'A#', 'B', 'C#', 'D#', 'F'],
+        'G#': ['G#', 'A#', 'C', 'C#', 'D#', 'F', 'G']
+        }
     
+    int(input())
+    notes = set([i for i in input().split()])
+
+    ans = set()
+
+    for k,v in scales.items():
+        if notes.issubset(v):
+            ans.add(k)
+    
+    if len(ans) == 0:
+        print("none")
+    else:
+        for i in sorted(ans):
+            print(i, sep = "", end =" ")
             
 
-
-
-
-
-
-if __name__ == "__main__":
+if __name__ == "__main__": 
     main()

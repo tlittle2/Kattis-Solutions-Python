@@ -25,6 +25,7 @@ def main():
     newlst2 = rotate(lst2)
 
     #merge
+    #print("".join(up[(up.index(newlst1[i]) + up.index(newlst2[i])) % len(up)] for i in range(len(newlst1))))
     s = ""
     for i in range(len(newlst1)):
         new = up.index(newlst1[i]) + up.index(newlst2[i])

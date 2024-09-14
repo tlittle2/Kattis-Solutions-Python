@@ -28,6 +28,7 @@ def main():
     #print("".join(up[(up.index(newlst1[i]) + up.index(newlst2[i])) % len(up)] for i in range(len(newlst1))))
     s = ""
     for i in range(len(newlst1)):
+        #s+=up[(up.index(newlst1[i]) + up.index(newlst2[i])) % len(up)]
         new = up.index(newlst1[i]) + up.index(newlst2[i])
         s+=up[new % len(up)]
 

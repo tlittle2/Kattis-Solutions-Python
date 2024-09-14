@@ -14,7 +14,7 @@ def main():
 
     lst = [binaries[i] for i in input()] #get all of the correct binary values and store them into a list (each value will have its own indice)
 
-    tLst = [list(i) for i in zip(*lst)] #transpose original list and make a list of list out of it
+    tLst = [list(i) for i in zip(*lst)] #transpose original list and make a list of lists out of it (by default, zip() puts everything as tuples, so we cast to list for easy insertion)
     
     for t in tLst:
         t.insert(2, " ") #add required space in the middle of each input (index 2)

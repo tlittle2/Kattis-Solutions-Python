@@ -20,7 +20,7 @@ def main():
             second[ans]+= 1
 
     
-    #if there is an input in one dict that is not in the other, add it to the other dictionary with a value of 0 (to normalize comparison)
+    #if there is an input in this dictionary that is not in the other, add it to this dictionary with a value of 0 (to normalize comparison)
     for k in second.keys():
         if k not in first.keys():
             first[k] = 0
@@ -29,7 +29,7 @@ def main():
         if k not in second.keys():
             second[k] = 0
 
-    #the answer is the sum of the minimum value for each key in each dictionary (the dictionary we choose to iterate through does not matter)
+    #the answer is the sum of the minimum value for each key in one of dictionaries (both dictionaries have the same keys, so the dictionary we choose to iterate through does not matter)
     print(sum(min(first[k], second[k]) for k in first.keys()))
 
 

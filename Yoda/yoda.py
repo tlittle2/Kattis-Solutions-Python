@@ -1,5 +1,5 @@
 def main():
-    #Make composite number a list of ints
+    #Make number a list of digits
     a = [int(i) for i in input()]
     b = [int(i) for i in input()]
 

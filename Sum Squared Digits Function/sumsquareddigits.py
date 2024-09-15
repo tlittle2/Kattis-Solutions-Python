@@ -1,7 +1,5 @@
 def main():
-    cases = int(input())
-
-    for _ in range(cases):
+    for _ in range(int(input())):
         thiscase, base, num = map(int, input().split())
         sum = 0
 

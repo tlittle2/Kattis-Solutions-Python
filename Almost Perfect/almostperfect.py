@@ -1,12 +1,9 @@
-"""
-Answer is right, but website having trouble reading input
-"""
-
 import math
+import sys
 
 def main():
-    while True :
-        ip = int(input())
+    for line in sys.stdin:
+        ip = int(line)
         count = 1
         for i in range(2, int(math.sqrt(ip)) + 1):
             if ip % i == 0:
@@ -18,6 +15,7 @@ def main():
         elif abs(ip - count) <=2:
             print("{} almost perfect".format(ip))
         else:
-            print("{} not perfect".format(ip))                
+            print("{} not perfect".format(ip))    
+                
 if __name__ == "__main__":
     main()

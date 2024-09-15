@@ -20,7 +20,7 @@ def main():
             second[ans]+= 1
 
     
-    #if there is an input in this dictionary that is not in the other, add it to this dictionary with a value of 0 (to normalize comparison)
+    #make sure both dictionaries have the same keys (to normalize comparison)
     for k in second.keys():
         if k not in first.keys():
             first[k] = 0

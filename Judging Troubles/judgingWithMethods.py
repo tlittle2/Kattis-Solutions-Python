@@ -24,7 +24,7 @@ def main():
     first = updateMap(first, second)
     second = updateMap(second,first)
 
-    #the answer is the sum of the minimum value for each key from both of dictionaries (both dictionaries have the same keys, so the dictionary we choose to iterate through does not matter)
+    #the answer is the sum of the minimum value for each key from both of dictionaries
     print(sum(min(first[k], second[k]) for k in first.keys()))
 
 if __name__ == "__main__":

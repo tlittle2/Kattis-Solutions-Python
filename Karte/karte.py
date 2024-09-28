@@ -17,6 +17,8 @@ def main():
         if i not in d.keys():
             d[i] = [noCardValue]
 
+    #alternatively: d.update({i: [noCardValue] for i in suits if i not in d.keys()})
+
 
     #calculate answer
     st = ""

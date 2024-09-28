@@ -12,10 +12,13 @@ def main():
             d[ip[i]] += [int(ip[i+1:i+3])]
 
     #any missing cards get a value of 0. As per the problem, we cannot ever have 0 as a value for a card
+    noCardValue = 0
     for i in suits:
         if i not in d.keys():
-            d[i] = [0]
+            d[i] = [noCardValue]
 
+
+    #calculate answer
     st = ""
     cardsPerSuit = 13
     for i in suits:
@@ -23,7 +26,7 @@ def main():
             st = "GRESKA"
             break
         else:
-            if 0 in d[i]: #. If 0 is the value for this suit, it will automatically be 13
+            if noCardValue in d[i]: #. If 0 is the value for this suit, it will automatically be 13
                 st+="{} ".format(cardsPerSuit)
             else:
                 st+="{} ".format(cardsPerSuit - len(d[i]))

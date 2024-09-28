@@ -7,9 +7,9 @@ def main():
     #append cards to dictionary
     for i in range(0,len(ip), 3):
         if ip[i] not in d.keys():
-            d[ip[i]] = [int(ip[i+1:i+3])]
+            d[ip[i]] = [ip[i+1:i+3]]
         else:
-            d[ip[i]] += [int(ip[i+1:i+3])]
+            d[ip[i]] += [ip[i+1:i+3]]
 
     #any missing cards get a value of 0. As per the problem, we cannot ever have 0 as a value for a card
     noCardValue = 0

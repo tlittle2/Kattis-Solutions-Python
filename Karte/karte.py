@@ -22,7 +22,7 @@ def main():
     st = ""
     cardsPerSuit = 13
     for i in suits:
-        if (len(set(d[i])) < len(d[i])): #compare the actual list to a set of the list (to remove duplicates and compare counts)
+        if (len(set(d[i])) < len(d[i])): #compare the actual list to the list as a set (to remove duplicates and compare counts)
             st = "GRESKA" #final string will automatically be GRESKA if we find ANY cases where we have duplicate cards
             break
         else:

@@ -8,6 +8,7 @@ def main():
         "G#" : "Ab"
     }
     counter = 1
+    
     for line in sys.stdin:
         string = line.split()
         if len(string) == 0:

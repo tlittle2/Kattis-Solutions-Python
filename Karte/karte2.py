@@ -24,8 +24,8 @@ def main():
     greska = "GRESKA"
     for i in suits:
         if (len(set(d[i])) < len(d[i])): #compare the actual list to the list as a set (to remove duplicates and compare counts)
-            lst.append("GRESKA")
-        elif noCardValue in d[i]: #. If 0 is the value for this suit, it will automatically be 13
+            lst.append(greska)
+        elif noCardValue in d[i]: #If 0 is the value for this suit, it will automatically be 13
             lst.append(cardsPerSuit)
         else:
             lst.append(cardsPerSuit - len(d[i]))
@@ -34,7 +34,7 @@ def main():
         print(greska)
     else:
         for i in lst:
-            print(i, sep = " ", end = " ")
+            ' '.join([i for i in lst])
 
 if __name__ == "__main__":
     main()

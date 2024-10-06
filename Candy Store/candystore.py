@@ -15,11 +15,8 @@ def main():
         else:
             d[cpInitials].append(ip)
 
-    initialList = []
+    initialList = [input() for _ in range(initials)]
 
-    for _ in range(initials):
-        initialList.append(input())
-    
     #create output
     for i in initialList:
         if i in d.keys():

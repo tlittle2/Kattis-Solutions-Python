@@ -10,7 +10,7 @@ def main():
         currName = comparors[i]
 
         if len(currName) == len(name):
-            diff = sum(1 for a,b in zip(name, currName) if a!=b) #get the number of times where masterName[i] is not equal to currName[i]
+            diff = sum(1 for a,b in zip(name, currName) if a!=b) #get the number of times where the tuple (masterName[i],currName[i]) are not equal
             if diff == 1: #if that difference is exactly 1, then update our answer
                 ans = min(ans, i)
 

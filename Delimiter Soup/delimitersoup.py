@@ -8,7 +8,7 @@ def main():
     int(input())
     ip = input()
     stk = []
-    val = set()
+    badMatches = set()
 
     for i in range(len(ip)):
         if ip[i] in d.values(): #if current char is an opening delimiter, push it to the stack
@@ -18,14 +18,11 @@ def main():
             if stk and d[ip[i]] == stk[-1]: # and it's matching opening delimiter is at the top of the stack
                 stk.pop() #pop opening delimiter off the stack
             else:
-                val.add("{} {}".format(ip[i], i))
-        
-        elif ip[i] != " ":
-            val.add("{} {}".format(ip[i], i))
-            
-
-    if val:
-        print("".join(val))
+                badMatches.add("{} {}".format(ip[i], i)) #otherwise, add this match.
+                break #Only want first occurrence, so break from here
+    
+    if badMatches:
+        print("".join(badMatches))
     else:
         print("ok so far")
                         

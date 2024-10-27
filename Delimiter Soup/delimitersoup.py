@@ -5,10 +5,11 @@ def main():
         ")":"("
     }
 
-    int(input())
-    ip = input()
     stk = []
     badMatch = ""
+
+    int(input())
+    ip = input()
 
     for i in range(len(ip)):
         if ip[i] in d.values(): #if current char is an opening delimiter, push it to the stack

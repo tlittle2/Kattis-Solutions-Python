@@ -16,7 +16,7 @@ def main():
             stk.append(ip[i])
         
         elif ip[i] in d.keys(): #if current char is a closing delimiter
-            if stk and d[ip[i]] == stk[-1]: # and it's matching opening delimiter is at the top of the stack
+            if stk and d[ip[i]] == stk[-1]: # and it's matching opening delimiter is currently at the top of the stack
                 stk.pop() #pop opening delimiter off the stack
             else:
                 badMatch = "{} {}".format(ip[i], i) #otherwise, add this match.

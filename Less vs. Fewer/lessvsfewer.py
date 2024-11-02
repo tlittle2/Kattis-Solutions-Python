@@ -10,13 +10,13 @@ def main():
     #create nouns dictionary to have the same layout as the lookup dictionary
     nouns = dict()
     for _ in range(words):
-        word,type = input().split()
-        if type not in nouns:
-            nouns[type] = [word]
+        word,nounType = input().split()
+        if nounType not in nouns:
+            nouns[nounType] = [word]
         else:
-            nouns[type].append(word)
+            nouns[nounType].append(word)
 
-    #if the prefix and the word having a matching key in the respective dictionaries, then it's a correct noun
+    #Given some phrase, if the phrase prefix and the word share a matching key in the respective dictionaries, then it's a correct noun
     for _ in range(phases):
         line = input().split()
         prefix = ' '.join(line[0:len(line)-1]) 

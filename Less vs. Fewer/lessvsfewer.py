@@ -1,16 +1,13 @@
 def main():
-    countNoun = "c"
-    massNoun = "m"
-    both = "cm"
-
     lookup = {
-        countNoun : ["number of","fewest","fewer","many","few"],
-        massNoun : ["amount of","least","less","much","little"],
-        both: ["most", "more"]
+        "c" : ["number of","fewest","fewer","many","few"],#count nouns
+        "m" : ["amount of","least","less","much","little"], #mass nouns
+        "cm": ["most", "more"] #count and mass nouns
     }
 
     words, phases = list(map(int, input().split()))
 
+    #create nouns dictionary to have the same layout as the lookup dictionary
     nouns = dict()
     for _ in range(words):
         word,type = input().split()
@@ -19,18 +16,12 @@ def main():
         else:
             nouns[type].append(word)
 
-  
+    #if the prefix and the word having a matching key in the respective dictionaries, then it's a correct noun
     for _ in range(phases):
         line = input().split()
-        
-        if len(line) > 2: #if length of line is 2, it means the line contains one of the longer keys (and we have to account for this accordingly)
-            prefix = ' '.join(line[0:len(line)-1]) 
-            word = line[len(line)-1]
-        else:
-            prefix = line[0]
-            word = line[1]
-
-      
+        prefix = ' '.join(line[0:len(line)-1]) 
+        word = line[len(line)-1]
+     
         nounKey = ''.join([k for k,v in nouns.items() if word in v])
         prefixKey = ''.join(([k for k,v in lookup.items() if prefix in v]))
 

@@ -2,7 +2,7 @@ def main():
     lookup = {
         "c" : ["number of","fewest","fewer","many","few"],#count nouns
         "m" : ["amount of","least","less","much","little"], #mass nouns
-        "cm": ["most", "more"] #count and mass nouns
+        "cm": ["most", "more"] #count and mass nouns (for easier comparison)
     }
 
     words, phases = list(map(int, input().split()))

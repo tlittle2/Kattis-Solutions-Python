@@ -22,8 +22,8 @@ def main():
         prefix = ' '.join(line[0:len(line)-1]) 
         word = line[len(line)-1]
      
-        nounKey = ''.join([k for k,v in nouns.items() if word in v])
         prefixKey = ''.join(([k for k,v in lookup.items() if prefix in v]))
+        nounKey = ''.join([k for k,v in nouns.items() if word in v])
 
         print("Correct!" if nounKey in prefixKey else "Not on my watch!")
 

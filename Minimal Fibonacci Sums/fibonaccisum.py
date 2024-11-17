@@ -25,7 +25,7 @@ def main():
             if sum(vals) + i <= num: #check if we go over our input number if we add this number to our current sum
                 vals.append(i)
     
-    print(" ".join(list(str(i) for i in sorted(vals)[1:])), sep = " ", end="")
+    print(" ".join(list(str(i) for i in sorted(vals)[1:])))
 
 if __name__ == "__main__":
     main()

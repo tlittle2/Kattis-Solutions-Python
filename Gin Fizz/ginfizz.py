@@ -15,7 +15,5 @@ def main():
     else:
         print("{} slices of lemon".format(ginfizz))
 
-
-
 if __name__ == "__main__":
     main()

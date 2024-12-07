@@ -8,9 +8,9 @@ def isPrime(n):
     return True
 
 def main():
-    primes = [i for i in range(2, 101) if isPrime(i)]
+    primes = [i for i in range(2, 10000) if isPrime(i)]
     
-    for i in range(5):
+    for i in range(100):
         print(primes[i])
 
 

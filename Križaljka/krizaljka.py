@@ -1,6 +1,6 @@
 #partially right
 
-def getEarliest(a,b): #get earliest from both words where we have a matching character
+def getEarliest(a,b): #get earliest index from both words where we have a matching character
     return next((i for i, ch  in enumerate(a) if ch in b),None)
 
 def main():

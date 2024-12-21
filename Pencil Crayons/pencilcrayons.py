@@ -4,8 +4,7 @@ def main():
     count = 0
     for _ in range(boxes):
         colors = input().split()
-        s = set(colors)
-        count+= len(colors) - len(s)
+        count+= len(colors) - len(set(colors))
 
     print(count)
 

@@ -8,7 +8,6 @@ def main():
         print("Gunnar")
     else:
         print("Tie")
-
-
+        
 if __name__ == "__main__": 
     main()

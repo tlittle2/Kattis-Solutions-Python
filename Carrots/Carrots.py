@@ -1,14 +1,10 @@
-#/usr/bin/env python3
-
-import sys
 def main():
+    contestants, problems= map(int, input().split())
 
-    numOfContestants, numOfProblems= map(int, sys.stdin.readline().split())
+    for _ in range(contestants):
+        input()
 
-    for i in range(numOfContestants):
-            randomInput= str(sys.stdin.readline())
-
-    print(numOfProblems)
-
-if __name__ == "__main__":
+    print(problems)
+    
+if __name__ == "__main__": 
     main()

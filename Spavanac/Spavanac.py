@@ -1,13 +1,11 @@
-#/usr/bin/env python3
-import sys
 def main():
-    while True:
-        hour, minute= map(int, sys.stdin.readline().split())
-        newMinute= minute - 45
+    hour, minute= map(int, input().split())
+    newMinute= minute - 45
+    
+    hour = hour-1 if newMinute < 0 else hour
         
-        if newMinute < 0:
-            hour-=1           
-        print(hour%24, newMinute%60)
+    print(hour%24, newMinute%60)
+    
 
-if __name__ == "__main__":
+if __name__ == "__main__": 
     main()

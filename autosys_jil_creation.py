@@ -71,7 +71,7 @@ def main():
     for i in collection:
         print("/*********************{}*********************/".format(prefixAndJob(i)))
         print("insert_job: {}".format(prefixAndJob(i)))
-        print(dependencies(collection, i).replace("condition:  &", "condition:")) # move & for first job in dependency condition
+        print(dependencies(collection, i).replace("condition:  &", "condition:")) # remove & for first job in dependency condition
         print("exclude_calendar: {}".format(calendar(collection, i)))
         print("box_name: ora_d_b_{}".format(boxName(collection, i)))
         print("alarm_if_fail: true")

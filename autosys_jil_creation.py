@@ -1,4 +1,4 @@
-#Purpose: Create equivalen Autosys JIL file for job order from another job scheduler framework (CA7, airflow, etc)
+#Purpose: Create equivalent Autosys JIL file for job order from another job scheduler framework (CA7, airflow, etc)
 
 prefix = "ora_d_c"
 job1 = 'job1'

@@ -6,13 +6,38 @@ job2 = 'job2'
 job3 = 'job3'
 job4 = 'job4'
 
+box1 = "qrsopsd1"
+box2 = "qrsdly02"
+box3 = "qrsdly01"
+
 def prefixAndJob(ip): return "{}_{}".format(prefix, ip)
+
+
+def assignToBox(collection):
+    d = {"{}".format(i): [] for i in collection}
+    d[job1] = box1
+    d[job2] = box1
+    
+    d[job3] = box2
+    d[job4] = box3
+    
+    return d
+
+
+def boxName(collection, ip):
+    boxMap = assignToBox(collection)
+
+    if ip in boxMap.keys():
+        return boxMap[ip]
+    else:
+        return ""
+
 
 
 def calendar(collection, ip): #using exclude calendar for now, can be customized
     calendarMap = {"{}".format(i): "BOMC_p1" for i in collection}
 
-    return "exclude_calendar: {}".format(calendarMap[ip])
+    return calendarMap[ip]
 
 
 def createDependencies(collection):
@@ -47,7 +72,8 @@ def main():
         print("/*********************{}*********************/".format(prefixAndJob(i)))
         print("insert_job: {}".format(prefixAndJob(i)))
         print(dependencies(collection, i).replace("condition:  &", "condition:")) # move & for first job in dependency condition
-        print(calendar(collection, i))
+        print("exclude_calendar: {}".format(calendar(collection, i)))
+        print("box_name: ora_d_b_{}".format(boxName(collection, i)))
         print("alarm_if_fail: true")
         print("alarm_if_terminated: true")
         print("\n")

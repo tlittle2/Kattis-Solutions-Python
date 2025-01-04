@@ -5,6 +5,7 @@ job1 = 'job1'
 job2 = 'job2'
 job3 = 'job3'
 
+
 def createDependencies(collection):
     d = {"{}".format(i): "" for i in collection}
     
@@ -33,6 +34,7 @@ def main():
     collection = [job1, job2, job3]
 
     for i in collection:
+        print("/*********************{}_{}*********************/".format(prefix,i))
         print("insert_job: {}_{}".format(prefix,i))
         print(dependencies(collection, i).replace("condition:  &", "condition: "))
         print("\n")

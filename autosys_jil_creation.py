@@ -36,7 +36,7 @@ def main():
     for i in collection:
         print("/*********************{}_{}*********************/".format(prefix,i))
         print("insert_job: {}_{}".format(prefix,i))
-        print(dependencies(collection, i).replace("condition:  &", "condition: "))
+        print(dependencies(collection, i).replace("condition:  &", "condition:"))
         print("\n")
    
         

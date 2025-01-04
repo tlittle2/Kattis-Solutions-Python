@@ -14,7 +14,7 @@ def prefixAndJob(ip): return "{}_{}".format(prefix, ip)
 
 
 def assignToBox(collection):
-    d = {"{}".format(i): [] for i in collection}
+    d = {"{}".format(i): "" for i in collection}
     d[job1] = box1
     d[job2] = box1
     

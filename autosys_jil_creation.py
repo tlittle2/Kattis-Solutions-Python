@@ -4,7 +4,7 @@ prefix = "ora_d_c"
 job1 = 'job1'
 job2 = 'job2'
 job3 = 'job3'
-
+job4 = 'job4'
 
 def prefixAndJob(ip): return "{}_{}".format(prefix, ip)
 
@@ -19,9 +19,9 @@ def createDependencies(collection):
     d = {"{}".format(i): [] for i in collection}
 
     #job name : upstream dependencies
-    d[job1] = [job2, job3]
-    d[job2] = [job3]
-
+    d[job3] = [job1, job2]
+    d[job4] = [job3]
+    
     return d
 
 def dependencies(collection, ip):
@@ -41,7 +41,7 @@ def dependencies(collection, ip):
 
 
 def main():
-    collection = [job1, job2, job3]
+    collection = [job1, job2, job3, job4]
 
     for i in collection:
         print("/*********************{}*********************/".format(prefixAndJob(i)))

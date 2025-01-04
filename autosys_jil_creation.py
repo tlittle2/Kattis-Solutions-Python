@@ -6,6 +6,8 @@ job2 = 'job2'
 job3 = 'job3'
 
 
+def prefixAndJob(ip): return "{}_{}".format(prefix, ip)
+
 def createDependencies(collection):
     d = {"{}".format(i): "" for i in collection}
     
@@ -23,7 +25,7 @@ def dependencies(collection, ip):
         if ip == k:
             if len(v) > 0:
                 for i in range(len(v)):
-                    string += " & s({}_{},0)".format(prefix, v[i])
+                    string += " & s({},0)".format(prefixAndJob(v[i]))
 
                 return "condition: {}".format(string)
             else:
@@ -34,8 +36,8 @@ def main():
     collection = [job1, job2, job3]
 
     for i in collection:
-        print("/*********************{}_{}*********************/".format(prefix,i))
-        print("insert_job: {}_{}".format(prefix,i))
+        print("/*********************{}*********************/".format(prefixAndJob(i)))
+        print("insert_job: {}".format(prefixAndJob(i)))
         print(dependencies(collection, i).replace("condition:  &", "condition:"))
         print("\n")
    

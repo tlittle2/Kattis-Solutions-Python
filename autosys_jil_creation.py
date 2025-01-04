@@ -13,6 +13,7 @@ box3 = "dly01"
 def prefixAndJob(ip):
     return "{}_{}".format(prefix, ip)
 
+
 def assignToBox(collection):
     d = {"{}".format(i): "" for i in collection}
     d[job1] = box1
@@ -31,6 +32,8 @@ def boxName(collection, ip):
         return boxMap[ip]
     else:
         return ""
+
+
 
 def calendar(collection, ip): #using 1 exclude calendar for now, can be customized
     calendarMap = {"{}".format(i): "BOMC_p1" for i in collection}
@@ -69,7 +72,7 @@ def main():
         print("/*********************{}*********************/".format(prefixAndJob(i)))
         print("insert_job: {}".format(prefixAndJob(i)))
         dependencies(collection, i)
-        print(dependencies(collection, i))#.replace("condition:  &", "condition:")) # remove & for first job in dependency condition
+        print(dependencies(collection, i).replace("condition:  &", "condition:")) # remove & for first job in dependency condition
         print("exclude_calendar: {}".format(calendar(collection, i)))
         print("box_name: ora_d_b_{}".format(boxName(collection, i)))
         print("alarm_if_fail: true")

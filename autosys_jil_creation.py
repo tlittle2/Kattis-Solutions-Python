@@ -7,6 +7,8 @@ Concept:
 3. Create static structures to help determine certain values for the JIL file for particular jobs (what autosys box, what job dependencies)
     a. This should be make it easy to understand how certain parts of the JIL file get created for a particular job
 4. Pass what is found in the data structure back to the calling method, and let calling method take care of generating the JIL parameter text
+
+Note: Try storing the global variables with the job names and the data structures in a separate python component, and import the component here for easier readability
 """
 
 prefix = "ora_d_c"

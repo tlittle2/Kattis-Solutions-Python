@@ -8,8 +8,15 @@ job3 = 'job3'
 
 def prefixAndJob(ip): return "{}_{}".format(prefix, ip)
 
+
+def calendar(collection, ip): #using exclude calendar for now, can be customized
+    calendarMap = {"{}".format(i): "BOMC_p1" for i in collection}
+
+    return "exclude_calendar: {}".format(calendarMap[ip])
+
+
 def createDependencies(collection):
-    d = {"{}".format(i): "" for i in collection}
+    d = {"{}".format(i): [] for i in collection}
 
     #job name : upstream dependencies
     d[job1] = [job2, job3]
@@ -40,6 +47,7 @@ def main():
         print("/*********************{}*********************/".format(prefixAndJob(i)))
         print("insert_job: {}".format(prefixAndJob(i)))
         print(dependencies(collection, i).replace("condition:  &", "condition:"))
+        print(calendar(collection, i))
         print("\n")
    
         

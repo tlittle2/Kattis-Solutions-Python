@@ -34,7 +34,7 @@ def boxName(collection, ip):
 
 
 
-def calendar(collection, ip): #using exclude calendar for now, can be customized
+def calendar(collection, ip): #using 1 exclude calendar for now, can be customized
     calendarMap = {"{}".format(i): "BOMC_p1" for i in collection}
 
     return calendarMap[ip]

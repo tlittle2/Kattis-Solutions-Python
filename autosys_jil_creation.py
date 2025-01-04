@@ -10,7 +10,8 @@ def prefixAndJob(ip): return "{}_{}".format(prefix, ip)
 
 def createDependencies(collection):
     d = {"{}".format(i): "" for i in collection}
-    
+
+    #job name : upstream dependencies
     d[job1] = [job2, job3]
     d[job2] = [job3]
 

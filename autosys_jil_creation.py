@@ -3,6 +3,7 @@ Purpose: Create equivalent Autosys JIL file for job order from another job sched
 
 Concept: 
 1. Store each job name as a variable, and stores equivalent string value as the variable. Make them global
+    a. this will make it easier to know what job you are referring to from your original job scheduler architecture
 2. Add to master collection in main, and pass the collection to calling methods
 3. Create static structures to help determine certain values for the JIL file for particular jobs (what autosys box, what job dependencies)
     a. This should be make it easy to understand how certain parts of the JIL file get created for a particular job

@@ -6,9 +6,9 @@ job2 = 'job2'
 job3 = 'job3'
 job4 = 'job4'
 
-box1 = "qrsopsd1"
-box2 = "qrsdly02"
-box3 = "qrsdly01"
+box1 = "opsd1"
+box2 = "dly02"
+box3 = "dly01"
 
 def prefixAndJob(ip): return "{}_{}".format(prefix, ip)
 

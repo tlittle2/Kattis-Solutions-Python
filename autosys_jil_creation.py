@@ -48,6 +48,8 @@ def main():
         print("insert_job: {}".format(prefixAndJob(i)))
         print(dependencies(collection, i).replace("condition:  &", "condition:")) # move & for first job in dependency condition
         print(calendar(collection, i))
+        print("alarm_if_fail: true")
+        print("alarm_if_terminated: true")
         print("\n")
    
         

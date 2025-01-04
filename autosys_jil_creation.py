@@ -21,7 +21,7 @@ def createDependencies(collection):
     #job name : upstream dependencies
     d[job3] = [job1, job2]
     d[job4] = [job3]
-    
+
     return d
 
 def dependencies(collection, ip):
@@ -46,7 +46,7 @@ def main():
     for i in collection:
         print("/*********************{}*********************/".format(prefixAndJob(i)))
         print("insert_job: {}".format(prefixAndJob(i)))
-        print(dependencies(collection, i).replace("condition:  &", "condition:"))
+        print(dependencies(collection, i).replace("condition:  &", "condition:")) # move & for first job in dependency condition
         print(calendar(collection, i))
         print("\n")
    

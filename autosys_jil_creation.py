@@ -50,11 +50,11 @@ def createDependencies(collection):
     return d
 
 def dependencies(collection, ip):
-    adjacencyList = createDependencies(collection)
+    adjacencyDict = createDependencies(collection)
 
     string = ""
 
-    for k,v in adjacencyList.items():
+    for k,v in adjacencyDict.items():
         if ip == k:
             if len(v) > 0:
                 for i in range(len(v)):

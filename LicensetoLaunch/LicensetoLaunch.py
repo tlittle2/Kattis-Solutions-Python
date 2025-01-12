@@ -1,17 +1,10 @@
-#/usr/bin/env python3
-
 def main():
-    n= int(input())
+    int(input())
+    values = list(map(int, input().split()))
 
-    for i in range(0,n):
+    d = {i: values[i] for i in range(len(values))}
 
-        m= (input().split())
-        print(m)
-    
-        smallestValue= m[0]
-        if m[i] < smallestValue:
-            smallestValue= m[i]
-        print(i)
+    print(min(d, key=d.get))
 
 if __name__ == "__main__":
     main()

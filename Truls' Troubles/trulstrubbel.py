@@ -19,7 +19,7 @@ def main():
             if max(d.values()) - min(d.values()) >= 2 or len(d.keys()) == 1:
                 d = emptyDict(points)
 
-    print("{}-{}".format(ifnull(d, 'T'), ifnull(d, 'H')))
+    print("{}-{}".format(ifnull(d, 'T'), ifnull(d, 'H'))) #T and H are our characters here, but can be extended to whatever characters we want
     
 if __name__ == "__main__":
     main()
